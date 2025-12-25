@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 ADMIN_ID = os.getenv("ADMIN_ID")
-ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")  # change later
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD")
 
 existing = users_collection.find_one({"user_id": ADMIN_ID})
 

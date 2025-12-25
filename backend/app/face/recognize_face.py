@@ -7,6 +7,8 @@ from app.attendance.attendance_manager import mark_attendance
 
 DATA_DIR = "app/face/data"
 
+FACE_MATCH_TOLERANCE = os.getenv("FACE_MATCH_TOLERANCE", 0.5) 
+
 # Runtime cache: user_id -> date (YYYY-MM-DD)
 marked_today = {}
 
@@ -51,7 +53,7 @@ def recognize():
             matches = face_recognition.compare_faces(
                 known_encodings,
                 face_encoding,
-                tolerance=0.5
+                tolerance=FACE_MATCH_TOLERANCE
             )
 
             name = "Unknown"

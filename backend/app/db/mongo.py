@@ -14,4 +14,5 @@ client = MongoClient(MONGO_URI)
 
 db = client["face_attendance"]
 attendance_collection = db["attendance"]
+users_collection = db["users"] 
 

@@ -7,7 +7,9 @@ from app.attendance.attendance_manager import mark_attendance
 
 DATA_DIR = "app/face/data"
 
-FACE_MATCH_TOLERANCE = os.getenv("FACE_MATCH_TOLERANCE", 0.5) 
+FACE_MATCH_TOLERANCE = float(
+    os.getenv("FACE_MATCH_TOLERANCE", 0.5)
+    ) 
 
 # Runtime cache: user_id -> date (YYYY-MM-DD)
 marked_today = {}

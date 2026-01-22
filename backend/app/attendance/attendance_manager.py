@@ -17,7 +17,7 @@ def mark_attendance(user_id):
         "user_id": user_id,
         "date": today,
         "time": now_time,
-        "status": "Present"
+        "status": "present"
     })
 
     return True
